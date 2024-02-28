@@ -7,14 +7,4 @@
   width: 375px;
   min-height: 5424px;
 }
-.logo {
-  width: 163px;
-  height: 18px;
-}
-.mean-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
+
