@@ -1,13 +1,10 @@
-import "./App.css";
-import "./components/Header/Header.css";
-import "./components/Home/Home.css";
 import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <main className="main-container">
+      <main className="flex flex-col items-center p-8 w-96 min-h-screen">
         <Header />
         <Home />
       </main>
