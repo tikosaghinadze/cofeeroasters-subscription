@@ -9,7 +9,12 @@ export default {
         "text-gradient":
           "linear-gradient(180deg,rgba(254,252,247,.0001) 0%,#FEFCF7 100%)",
         darkBlue: "#333D4B",
-        lightBrown: "#FDD6BA",
+        lightBlue: "#2C343E",     
+        light: "#FEFCF7",
+        hulk: "#0E8784",
+        gray: "#83888F",
+        cream: "#FDD6BA",
+        footerBg: "#2C343E",
       },
       fontFamily: {
         "body-font1": ["Fraunces", "serif"],

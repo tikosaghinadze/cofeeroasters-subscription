@@ -1,6 +1,8 @@
 import ImageBeer from "../../assets/images/home/mobile/image-hero-coffeepress.jpg";
-import Collections from "../../components/Header/Collections";
-import { cofees } from "../../helpers/helper";
+import Collections from "../../components/home/Collections";
+import Cards from "../../components/home/Cards";
+import Steps from "../../components/home/Steps";
+import { cardItems, cofees, stepItems } from "../../helpers/helper";
 
 const Home = () => {
   return (
@@ -22,17 +24,8 @@ const Home = () => {
         </button>
       </div>
       <Collections items={cofees} />
-      <div className="why-choose-us">
-        <article>
-          <h2 className="text-2xl font-body-font1 text-darkBlue text-center"></h2>
-          <p className="text-center text-darkBlue font-body-font2 font-normal text-[15px] leading-6"></p>
-        </article>
-        <div className="company-benefits">
-          <div className="benefit1"></div>
-          <div className="benefit2"></div>
-          <div className="benefit3"></div>
-        </div>
-      </div>
+      <Cards items={cardItems} />
+      <Steps items={stepItems}></Steps>
     </div>
   );
 };
