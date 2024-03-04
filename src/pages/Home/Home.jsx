@@ -1,10 +1,13 @@
-import Image from "../../assets/images/home/mobile/image-hero-coffeepress.jpg";
+import ImageBeer from "../../assets/images/home/mobile/image-hero-coffeepress.jpg";
+import Collections from "../../components/Header/Collections";
+import { cofees } from "../../helpers/helper";
+
 const Home = () => {
   return (
     <div className="home-introduce">
       <div
-        className="w-82 bg-no-repeat bg-cover rounded-[10px] flex flex-col items-center px-6 py-[100px] "
-        style={{ backgroundImage: `url(${Image})` }}
+        className="w-82 mb-28 bg-no-repeat bg-cover rounded-[10px] flex flex-col items-center px-6 py-[100px] "
+        style={{ backgroundImage: `url(${ImageBeer})` }}
       >
         <h2 className=" text-whiteText text-center  font-body-font1 text-[40px] font-extrabold leading-10">
           Great coffee made simple.
@@ -18,11 +21,11 @@ const Home = () => {
           Create your plan
         </button>
       </div>
-      <section className="cofee-collection"></section>
+      <Collections items={cofees} />
       <div className="why-choose-us">
         <article>
-          <h2></h2>
-          <p></p>
+          <h2 className="text-2xl font-body-font1 text-darkBlue text-center"></h2>
+          <p className="text-center text-darkBlue font-body-font2 font-normal text-[15px] leading-6"></p>
         </article>
         <div className="company-benefits">
           <div className="benefit1"></div>
