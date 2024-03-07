@@ -1,3 +1,4 @@
+import { Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Home from "./pages/Home/Home";
@@ -7,7 +8,9 @@ function App() {
     <>
       <main className="flex flex-col items-center p-8 w-96 min-h-screen">
         <Header />
-        <Home />
+        <Routes>
+          <Route path="/" element={<Home />} />
+        </Routes>
         <Footer />
       </main>
     </>
