@@ -5,6 +5,9 @@ import Danche from "../assets/images/home/desktop/image-danche.png";
 import CofeeBean from "../assets/images/home/desktop/icon-coffee-bean.svg";
 import GiftIcon from "../assets/images/home/desktop/icon-gift.svg";
 import TruckIcon from "../assets/images/home/desktop/icon-truck.svg";
+import UnitedKingdom from "../assets/images/about/desktop/illustration-uk.svg";
+import Canada from "../assets/images/about/desktop/illustration-canada.svg";
+import Australia from "../assets/images/about/desktop/illustration-australia.svg";
 
 export const cofees = [
   {
@@ -74,3 +77,30 @@ export const stepItems = [
       "We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.",
   },
 ];
+export const headQuartersItems = [
+  {
+    image: UnitedKingdom,
+    country: "United Kingdom",
+    address: "68 Asfordby Rd ",
+    city: "Alcaston",
+    province: "SY6 1YA",
+    number: "+44 1241 918425",
+  },
+  {
+    image: Canada,
+    country: "Canada",
+    address: "1528 Eglinton Avenue",
+    city: "Toronto",
+    province: "Ontario M4P 1A6",
+    number: "+1 416 485 2997",
+  },
+  {
+    image: Australia,
+    country: "Australia",
+    address: "36 Swanston Street",
+    city: "Kewell",
+    province: "Victoria ",
+    number: "+61 4 9928 3629",
+  },
+];
+
