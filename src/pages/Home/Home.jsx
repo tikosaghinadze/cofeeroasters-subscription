@@ -25,7 +25,7 @@ const Home = () => {
       </div>
       <Collections items={cofees} />
       <Cards items={cardItems} />
-      <Steps items={stepItems}></Steps>
+      <Steps items={stepItems} />
     </div>
   );
 };

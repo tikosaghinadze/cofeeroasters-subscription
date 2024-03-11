@@ -6,9 +6,11 @@ export default {
       backgroundImage: {
         aboutCofee:
           "url('/src/assets/images/about/mobile/image-hero-whitecup.jpg')",
-        aboutCup: "url(`/src/assets/images/about/mobile/image-quality.jpg`)",
+        aboutCup: "url('/src/assets/images/about/mobile/image-quality.jpg')",
         aboutHero:
-          "url(`/src/assets/images/about/mobile/image-commitment.jpg`)",
+          "url('/src/assets/images/about/mobile/image-commitment.jpg')",
+        imageHeroBlackcup:
+          "url('src/assets/images/plan/mobile/image-hero-blackcup.jpg')",
       },
       colors: {
         whiteText: "#fefcf7;",
@@ -22,6 +24,7 @@ export default {
         gray: "#83888F",
         cream: "#FDD6BA",
         footerBg: "#2C343E",
+        gray2: "#F4F1EB",
       },
       fontFamily: {
         "body-font1": ["Fraunces", "serif"],

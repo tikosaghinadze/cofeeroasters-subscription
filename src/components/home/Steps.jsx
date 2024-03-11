@@ -2,7 +2,7 @@ import Step from "./Step";
 
 const Steps = (props) => {
   return (
-    <div className="mt-[660px] w-full flex flex-col items-center">
+    <div className="mt-[660px] w-full flex flex-col items-center ">
       <h2 className=" font-black font-body-font1 text-2xl text-gray">
         How it works
       </h2>
@@ -10,6 +10,7 @@ const Steps = (props) => {
         {props.items.map((item) => {
           return (
             <Step
+            color={""}
               key={item.step}
               step={item.step}
               title={item.title}

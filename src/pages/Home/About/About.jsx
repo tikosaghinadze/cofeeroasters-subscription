@@ -16,7 +16,7 @@ const About = () => {
         </p>
       </div>
       <div className="w-full flex flex-col items-center mt-[120px] ">
-        <div className="w-full h-[400px] bg-aboutCofee bg-cover bg-no-repeat rounded-[10px]"></div>
+        <div className="w-full h-[400px] bg-aboutHero bg-cover bg-no-repeat rounded-[10px]"></div>
         <div className="w-full flex flex-col items-center pt-8">
           <h3 className="font-body-font1 font-black text-[32px] text-darkBlue">
             Our commitment
@@ -37,7 +37,7 @@ const About = () => {
         </div>
       </div>
       <div className="relative px-6 pt-[120px] w-full flex flex-col items-center h-[542px] bg-darkBlue opacity-2 rounded-[10px] mt-[198px]">
-        <div className="w-[279px] absolute top-0 -translate-y-[50%] bg-cover bg-no-repeat  h-[150px] bg-aboutCofee rounded-[10px]"></div>
+        <div className="w-[279px] absolute top-0 -translate-y-[50%] bg-cover bg-no-repeat  h-[150px] bg-aboutCup rounded-[10px]"></div>
         <div className="w-full flex flex-col items-center gap-6">
           <h3 className="text-center font-normal font-body-font1 text-[28px] text-light">
             {" "}
@@ -53,7 +53,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <HeadQuarters items={headQuartersItems} />
+      <HeadQuarters  items={headQuartersItems} />
     </div>
   );
 };
