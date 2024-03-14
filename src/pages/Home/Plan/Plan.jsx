@@ -1,13 +1,6 @@
 import DarkSteps from "../../../components/Plan/DarkSteps";
 import PlanQuestions from "../../../components/Plan/PlanQuestions";
-import { stepItems } from "../../../helpers/helper";
-import {
-  cofeeCups,
-  cofeeTypes,
-  gramCofees,
-  grindCofees,
-  deliverTime,
-} from "../../../helpers/helper";
+import { questions, stepItems } from "../../../helpers/helper";
 
 const Plan = () => {
   return (
@@ -23,13 +16,7 @@ const Plan = () => {
         </p>
       </div>
       <DarkSteps items={stepItems} />
-      <PlanQuestions
-        cofeeCups={cofeeCups}
-        cofeeTypes={cofeeTypes}
-        gramCofees={gramCofees}
-        grindCofees={grindCofees}
-        deliverTime={deliverTime}
-      />
+      <PlanQuestions items={questions} />
     </div>
   );
 };
