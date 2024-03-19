@@ -17,6 +17,7 @@ const Plan = () => {
       </div>
       <DarkSteps items={stepItems} />
       <PlanQuestions items={questions} />
+      
     </div>
   );
 };
