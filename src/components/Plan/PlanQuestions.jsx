@@ -3,6 +3,7 @@ import { useState } from "react";
 const PlanQuestions = (props) => {
   const [selectedItem, setSelectedItem] = useState(null);
   const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [showModal, setShowModal] = useState(false); // State variable for modal visibility
 
   const showAnswersHandle = (item) => {
     setSelectedItem(item === selectedItem ? null : item);
@@ -15,6 +16,14 @@ const PlanQuestions = (props) => {
     });
   };
 
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
+  // Function to handle "Create my plan!" button click
+  const handleCreatePlan = () => {
+    toggleModal(); // Open the modal
+  };
   return (
     <div className="mt-[110px] w-full flex flex-col items-center gap-[96px]">
       {props.items.map((item, index) => {
@@ -117,6 +126,85 @@ const PlanQuestions = (props) => {
           {"."}
         </p>
       </div>
+      <button
+        onClick={handleCreatePlan}
+        className=" px-4 py-[35px] bg-hulk w-[217px] h-[56px] rounded-[6px] flex justify-center items-center text-lg font-black text-light font-body-font1 "
+      >
+        Create my plan!
+      </button>
+      {showModal && (
+        <div className="fixed bg-white w-[327px] inset-0 flex items-center flex-col z-50 bg-gray-800 ">
+          <div className="bg-darkBlue w-full">
+            {" "}
+            <h3 className="text-white font-body-font1 text-[28px] font-black">
+              Order Summary
+            </h3>
+          </div>
+          <div>
+            <p className="mt-[10px] font-body-font1 text-gray text-2xl font-black leading-10">
+              {"I drink my coffee as "}
+              {selectedAnswers[props.items[0].id] && (
+                <span className="text-hulk">
+                  {
+                    props.items[0].options.find(
+                      (opt) => opt.id === selectedAnswers[props.items[0].id]
+                    ).type
+                  }
+                </span>
+              )}
+              {", with a "}
+              {selectedAnswers[props.items[1].id] && (
+                <span className="text-hulk">
+                  {
+                    props.items[1].options.find(
+                      (opt) => opt.id === selectedAnswers[props.items[1].id]
+                    ).type
+                  }
+                </span>
+              )}
+              {" type of bean. "}
+              {selectedAnswers[props.items[2].id] && (
+                <span className="text-hulk">
+                  {
+                    props.items[2].options.find(
+                      (opt) => opt.id === selectedAnswers[props.items[2].id]
+                    ).type
+                  }
+                </span>
+              )}
+              {" ground ala "}
+              {selectedAnswers[props.items[3].id] && (
+                <span className="text-hulk">
+                  {
+                    props.items[3].options.find(
+                      (opt) => opt.id === selectedAnswers[props.items[3].id]
+                    ).type
+                  }
+                </span>
+              )}
+              {", sent to me "}
+              {selectedAnswers[props.items[4].id] && (
+                <span className="text-hulk">
+                  {
+                    props.items[4].options.find(
+                      (opt) => opt.id === selectedAnswers[props.items[4].id]
+                    ).type
+                  }
+                </span>
+              )}
+              {"."}
+            </p>
+            <p className=" font-body-font2 font-black tex-[15px] text-darkBlue">
+              Is this correct? You can proceed to checkout or go back to plan
+              selection if something is off. Subscription discount codes can
+              also be redeemed at the checkout.{" "}
+            </p>
+            <button className=" px-4 py-[35px] bg-hulk w-[217px] h-[56px] rounded-[6px] flex justify-center items-center text-lg font-black text-light font-body-font1 ">
+              Checkout - $14.00 / mo
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
