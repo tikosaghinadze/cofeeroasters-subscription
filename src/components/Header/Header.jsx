@@ -6,6 +6,7 @@ import BurgerMenuModal from "../BurgerMenuModal.jsx";
 const Header = () => {
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  
   const showBurgerMenuHandle = () => {
     setShowBurgerMenu(!showBurgerMenu);
     setShowModal(!showModal);

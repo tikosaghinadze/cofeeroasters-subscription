@@ -15,6 +15,8 @@ export default {
       colors: {
         whiteText: "#fefcf7;",
         specialGreen: "#0E8784",
+        modalGradient:
+          "linear-gradient(180deg, rgba(254, 252, 247, 0.50) 0%, #FEFCF7 55.94%)",
         "text-gradient":
           "linear-gradient(180deg,rgba(254,252,247,.0001) 0%,#FEFCF7 100%)",
         darkBlue: "#333D4B",
