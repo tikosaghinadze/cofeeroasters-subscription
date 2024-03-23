@@ -5,6 +5,7 @@ import Steps from "../../components/home/Steps";
 import { cardItems, cofees, stepItems } from "../../helpers/helper";
 import { Link } from "react-router-dom";
 const Home = () => {
+ 
   return (
     <div className="home-introduce">
       <div
@@ -20,6 +21,7 @@ const Home = () => {
           your door, at your schedule.
         </p>
         <Link
+          onClick={() => handleLinkClick()}
           to="/plan"
           className="w-54 h-14 rounded-md bg-specialGreen border-none text-whiteText text-center leading-6  font-body-font1 p-8 py-4 text-lg font-extrabold"
         >

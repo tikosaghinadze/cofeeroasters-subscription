@@ -3,6 +3,9 @@ import Facebook from "../../assets/images/shared/desktop/icon-facebook.svg";
 import Twitter from "../../assets/images/shared/desktop/icon-twitter.svg";
 import Instagram from "../../assets/images/shared/desktop/icon-instagram.svg";
 import { Link } from "react-router-dom";
+const handleLinkClick = () => {
+  window.scrollTo(0, 0);
+};
 const Footer = () => {
   return (
     <div className="mt-[120px] w-full p-14 bg-darkBlue ">
@@ -11,18 +14,21 @@ const Footer = () => {
       </div>
       <div className=" flex flex-col items-center my-12 gap-6">
         <Link
+          onClick={handleLinkClick}
           to="/"
           className="text-gray cursor-pointer font-bold text-xs tracking-widest"
         >
           HOME
         </Link>
         <Link
+          onClick={handleLinkClick}
           to="/about"
           className="text-gray cursor-pointer font-bold text-xs tracking-widest"
         >
           ABOUT US
         </Link>
         <Link
+          onClick={handleLinkClick}
           to="/plan"
           className="text-gray cursor-pointer font-bold text-xs tracking-widest"
         >
