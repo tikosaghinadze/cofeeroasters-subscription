@@ -4,17 +4,23 @@ import Hamburger from "../../assets/images/shared/mobile/icon-hamburger.svg";
 import CloseBtn from "../../assets/images/home/mobile/close.svg";
 import BurgerMenuModal from "../BurgerMenuModal.jsx";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
 const Header = () => {
   const [showBurgerMenu, setShowBurgerMenu] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  
 
   const showBurgerMenuHandle = () => {
     setShowBurgerMenu(!showBurgerMenu);
     setShowModal(!showModal);
   };
   return (
-    <header className=" w-full flex justify-between items-center mb-10 md:w-[689px]">
+    <motion.div
+      initial={{ opacity: 0, y: -200 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className=" w-full flex justify-between items-center mb-10 md:w-[689px]"
+    >
       <img
         className="w-40 h-4 md:w-[236px] md:h-[26px]"
         src={Logo}
@@ -22,7 +28,6 @@ const Header = () => {
       />
       <div className="md:flex gap-[33px] hidden ">
         <Link
-          
           className="text-[12px]  uppercase leading-[15px] font-bold text-gray tracking-[0.923px] font-body-font2"
           to="/"
         >
@@ -58,7 +63,7 @@ const Header = () => {
       {showModal && (
         <BurgerMenuModal showBurgerMenuHandle={showBurgerMenuHandle} />
       )}
-    </header>
+    </motion.div>
   );
 };
 export default Header;
