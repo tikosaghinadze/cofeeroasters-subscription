@@ -3,7 +3,7 @@ import Collections from "../../components/home/Collections";
 import Cards from "../../components/home/Cards";
 import Steps from "../../components/home/Steps";
 import { cardItems, cofees, stepItems } from "../../helpers/helper";
-
+import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="home-introduce">
@@ -19,9 +19,12 @@ const Home = () => {
           curated artisan coffees from our best roasters delivered directly to
           your door, at your schedule.
         </p>
-        <button className="w-54 h-14 rounded-md bg-specialGreen border-none text-whiteText text-center leading-6  font-body-font1 p-8 py-4 text-lg font-extrabold">
+        <Link
+          to="/plan"
+          className="w-54 h-14 rounded-md bg-specialGreen border-none text-whiteText text-center leading-6  font-body-font1 p-8 py-4 text-lg font-extrabold"
+        >
           Create your plan
-        </button>
+        </Link>
       </div>
       <Collections items={cofees} />
       <Cards items={cardItems} />

@@ -17,7 +17,7 @@ body {
 
 .modalGradient {
   background: linear-gradient(
-    180deg,
+    0deg,
     rgba(254, 252, 247, 0.5) 0%,
     #fefcf7 55.94%
   );

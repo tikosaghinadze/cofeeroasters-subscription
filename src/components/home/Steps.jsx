@@ -1,5 +1,5 @@
 import Step from "./Step";
-
+import { Link } from "react-router-dom";
 const Steps = (props) => {
   return (
     <div className="mt-[660px] w-full flex flex-col items-center ">
@@ -10,7 +10,7 @@ const Steps = (props) => {
         {props.items.map((item) => {
           return (
             <Step
-            color={""}
+              color={""}
               key={item.step}
               step={item.step}
               title={item.title}
@@ -19,9 +19,12 @@ const Steps = (props) => {
           );
         })}
       </ul>
-      <button className="no-underline font-body-font1 font-black text-lg leading-[25px] text-light px-8 py-4 rounded-md bg-hulk md:mt-11">
+      <Link
+        to="/plan"
+        className="no-underline font-body-font1 font-black text-lg leading-[25px] text-light px-8 py-4 rounded-md bg-hulk md:mt-11"
+      >
         Create your plan
-      </button>
+      </Link>
     </div>
   );
 };
