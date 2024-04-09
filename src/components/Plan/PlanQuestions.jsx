@@ -49,7 +49,7 @@ const PlanQuestions = (props) => {
                   return (
                     <div
                       onClick={() => selectAnswer(item.id, type.id)}
-                      className={`w-full h-[140px] p-6 flex flex-col gap-2 rounded-lg cursor-pointer md:h-[250px] ${
+                      className={`w-full h-[140px] p-6 flex flex-col gap-2 rounded-lg cursor-pointer md:h-[250px] hover:bg-hoverCream ${
                         selectedAnswers[item.id] === type.id
                           ? "bg-hulk text-white"
                           : "bg-gray2 text-darkBlue"
