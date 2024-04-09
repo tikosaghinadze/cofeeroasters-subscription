@@ -1,6 +1,13 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const BurgerMenuModal = (props) => {
+  useEffect(() => {
+    document.body.classList.add("modal-open");
+    return () => {
+      document.body.classList.remove("modal-open");
+    };
+  }, []);
   return (
     <div className=" rounded-[10px] modalGradient h-[500px] fixed top-[333px] left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-light w-[327px] flex justify-start">
       <ul className=" w-full flex flex-col text-center gap-8 mt-20">

@@ -38,3 +38,6 @@ body {
 .hover-bg:hover .svg-icon {
   fill: #fdd6ba;
 }
+.modal-open {
+  overflow: hidden;
+}
