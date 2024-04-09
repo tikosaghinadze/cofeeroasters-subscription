@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const Plan = () => {
   return (
     <div className="w-full flex flex-col items-center md:w-[689px] xl:w-[1280px]">
-      <div className="w-full rounded-[10px] flex flex-col items-center h-[400px] bg-imageHeroBlackcup bg-cover bg-no-repeat px-6 pb-[136px] pt-[100px] md:items-start xl:pl-[85px]">
+      <div className="w-full rounded-[10px] flex flex-col items-center h-[400px] bg-aboutCofee bg-cover bg-no-repeat px-6 pb-[136px] pt-[100px] md:items-start xl:pl-[85px]">
         <motion.div
           initial={{ opacity: 0, x: -200 }}
           animate={{ opacity: 1, x: 0 }}
