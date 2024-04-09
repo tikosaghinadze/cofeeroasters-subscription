@@ -22,3 +22,19 @@ body {
     #fefcf7 55.94%
   );
 }
+.home-poster-mobile {
+  background-image: url(./assets/images/home/mobile/image-hero-coffeepress.jpg);
+}
+
+.home-poster-tablet {
+  background-image: url(./assets/images/home/tablet/image-hero-coffeepress.jpg);
+}
+.home-poster-desktop {
+  background-image: url(./assets/images/home/desktop/image-hero-coffeepress.jpg);
+}
+.svg-icon {
+  fill: current;
+}
+.hover-bg:hover .svg-icon {
+  fill: #fdd6ba;
+}

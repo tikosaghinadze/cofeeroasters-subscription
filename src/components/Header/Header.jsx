@@ -19,28 +19,31 @@ const Header = () => {
       initial={{ opacity: 0, y: -200 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
-      className=" w-full flex justify-between items-center mb-10 md:w-[689px]"
+      className=" w-full flex justify-between items-center mb-10 md:w-[689px] xl:w-[1280px]"
     >
-      <img
-        className="w-40 h-4 md:w-[236px] md:h-[26px]"
-        src={Logo}
-        alt=" cofeeroasters logo"
-      />
+      <Link to="/">
+        <img
+          className="w-40 h-4 md:w-[236px] md:h-[26px]"
+          src={Logo}
+          alt=" cofeeroasters logo"
+        />
+      </Link>
+
       <div className="md:flex gap-[33px] hidden ">
         <Link
-          className="text-[12px]  uppercase leading-[15px] font-bold text-gray tracking-[0.923px] font-body-font2"
+          className="text-[12px]  uppercase leading-[15px] font-bold text-gray tracking-[0.923px] font-body-font2 hover:text-hoverDark "
           to="/"
         >
           Home{" "}
         </Link>
         <Link
-          className="text-[12px]  uppercase leading-[15px] font-bold text-gray font-body-font2"
+          className="text-[12px]  uppercase leading-[15px] font-bold text-gray font-body-font2 hover:text-hoverDark"
           to="/about"
         >
           About Us
         </Link>
         <Link
-          className="text-[12px]  uppercase leading-[15px] font-bold text-gray font-body-font2"
+          className="text-[12px]  uppercase leading-[15px] font-bold text-gray font-body-font2 hover:text-hoverDark"
           to="/plan"
         >
           Create Your Plan

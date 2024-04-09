@@ -8,43 +8,49 @@ const handleLinkClick = () => {
 };
 const Footer = () => {
   return (
-    <div className="mt-[120px] w-full p-14 bg-darkBlue ">
-      <div>
-        <img className="" src={Logo} alt="logo" />
+    <div className="mt-[120px] w-full p-14 bg-darkBlue md:w-[688px] xl:w-[1280px] xl:flex  xl:flex-row ">
+      <div className="mt-14 xl:mt-0 xl:w-[236px] xl:h-[26px] md:flex md:justify-center md:mt-0">
+        <Link to="/" onClick={handleLinkClick}>
+          <img
+            className=" xl:mt-0 xl:w-[236px] xl:h-[26px]"
+            src={Logo}
+            alt="logo"
+          />
+        </Link>
       </div>
-      <div className=" flex flex-col items-center my-12 gap-6">
+      <div className=" flex flex-col items-center my-12 gap-6 xl:flex-row md:flex-row md:justify-center xl:my-0 xl:ml-[100px] xl:mr-[400px] ">
         <Link
           onClick={handleLinkClick}
           to="/"
-          className="text-gray cursor-pointer font-bold text-xs tracking-widest"
+          className="text-gray cursor-pointer font-bold text-xs tracking-widest hover:text-white"
         >
           HOME
         </Link>
         <Link
           onClick={handleLinkClick}
           to="/about"
-          className="text-gray cursor-pointer font-bold text-xs tracking-widest"
+          className="text-gray cursor-pointer font-bold text-xs tracking-widest hover:text-white"
         >
           ABOUT US
         </Link>
         <Link
           onClick={handleLinkClick}
           to="/plan"
-          className="text-gray cursor-pointer font-bold text-xs tracking-widest"
+          className="text-gray cursor-pointer font-bold text-xs tracking-widest hover:text-white"
         >
-          Create your plan
+          CREATE YOUR PLAN
         </Link>
       </div>
       <div className="flex flex-row gap-5 items-center justify-center">
-        <div>
+        <div className="hover:bg-hoverCream">
           {" "}
-          <img src={Facebook} alt="facebook" />
+          <img className="svg-icon" src={Facebook} alt="facebook" />
         </div>
-        <div>
+        <div className="hover:bg-hoverCream">
           {" "}
           <img src={Twitter} alt="tvitter" />
         </div>
-        <div>
+        <div className="hover:bg-hoverCream">
           {" "}
           <img src={Instagram} alt="instagram" />
         </div>

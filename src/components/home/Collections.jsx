@@ -9,7 +9,7 @@ const Collections = (props) => {
           our collection
         </h2>
       </div>
-      <ul className="flex flex-col items-center gap-x-12 ">
+      <ul className="list-none flex flex-col items-center mt-3 gap-y-12 md:-mt-10 xl:flex-row xl:gap-x-8 ">
         {props.items.map((item) => {
           return (
             <CofeeItems

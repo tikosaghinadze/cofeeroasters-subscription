@@ -13,6 +13,9 @@ export default {
           "url('src/assets/images/plan/mobile/image-hero-blackcup.jpg')",
       },
       colors: {
+        hoverDark: "#333D4B",
+        hoverCream: "#FDD6BA",
+        hovertBlue: "#66D2CF",
         whiteText: "#fefcf7;",
         specialGreen: "#0E8784",
         modalGradient:

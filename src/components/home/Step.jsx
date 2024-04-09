@@ -1,6 +1,6 @@
 const Step = (props) => {
   return (
-    <div className="w-full flex flex-col items-center">
+    <div className="w-full flex flex-col items-center  md:items-start md:h-[369px] md:w-[223px]">
       <h2 className="fraunces font-black text-[72px] leading-[72px] text-cream">
         {props.step}
       </h2>

@@ -29,7 +29,10 @@ const PlanQuestions = (props) => {
       {props.items.map((item, index) => {
         return (
           <div key={item.id} className="w-full flex flex-col justify-start ">
-            <div className="mb-8 flex flex-beatween items-center gap-[69px]">
+            <div
+              onClick={() => showAnswersHandle(item)}
+              className="mb-8 flex justify-between items-center cursor-pointer "
+            >
               <h2 className="text-gray font-body-font1 text-2xl font-black leading-7">
                 {item.question}
               </h2>
@@ -41,12 +44,12 @@ const PlanQuestions = (props) => {
               />
             </div>
             {selectedItem === item && (
-              <section className="w-full flex flex-col items-center gap-4">
+              <section className="w-full flex flex-col items-center gap-4 md:flex-row">
                 {item.options.map((type) => {
                   return (
                     <div
                       onClick={() => selectAnswer(item.id, type.id)}
-                      className={`w-full h-[140px] p-6 flex flex-col gap-2 rounded-lg cursor-pointer ${
+                      className={`w-full h-[140px] p-6 flex flex-col gap-2 rounded-lg cursor-pointer md:h-[250px] ${
                         selectedAnswers[item.id] === type.id
                           ? "bg-hulk text-white"
                           : "bg-gray2 text-darkBlue"
@@ -128,7 +131,7 @@ const PlanQuestions = (props) => {
       </div>
       <button
         onClick={handleCreatePlan}
-        className=" px-4 py-[35px] bg-hulk w-[217px] h-[56px] rounded-[6px] flex justify-center items-center text-lg font-black text-light font-body-font1 "
+        className=" px-4 py-[35px] bg-hulk w-[217px] h-[56px] rounded-[6px] flex justify-center items-center text-lg font-black text-light font-body-font1 hover:bg-hovertBlue "
       >
         Create my plan!
       </button>
@@ -138,7 +141,7 @@ const PlanQuestions = (props) => {
             onClick={() => setShowModal(!showModal)}
             className="bg-black opacity-80 inset-0 fixed w-full h-full"
           ></div>
-          <div className="rounded-[10px]  z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[327px]  flex items-center flex-col  bg-gray-800 ">
+          <div className="rounded-[10px]  z-10 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white w-[327px]  flex items-center flex-col md:w-[540px] bg-gray-800 ">
             <div className="bg-darkBlue w-full h-[92px] rounded-tl-[10px] rounded-tr-[10px] flex justify-start px-6  items-center">
               {" "}
               <h3 className="text-white font-body-font1 text-[28px] font-black">
@@ -204,7 +207,10 @@ const PlanQuestions = (props) => {
                 selection if something is off. Subscription discount codes can
                 also be redeemed at the checkout.{" "}
               </p>
-              <button className=" my-6 px-4 py-[35px] bg-hulk w-full h-[56px] rounded-[6px] flex justify-center items-center text-lg font-black text-light font-body-font1 ">
+              <button
+                onClick={() => setShowModal(!showModal)}
+                className="hover:bg-hovertBlue my-6 px-4 py-[35px] bg-hulk w-full h-[56px] rounded-[6px] flex justify-center items-center text-lg font-black text-light font-body-font1 "
+              >
                 Checkout - $14.00 / mo
               </button>
             </div>
